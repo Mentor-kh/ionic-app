@@ -1,0 +1,51 @@
+.form-row {
+    margin-bottom: 10px;
+}
+
+img[class^='cover'] {
+    position: absolute;
+    top: 0;
+    &.lt {
+        left:0;
+        max-width: 80vw;
+        height: auto;
+    }
+    &.rt {
+        right: 0;
+        max-width: 15vw;
+        height: auto;
+    }
+}
+
+.divider {
+    display: block;
+    position: relative;
+    font-size: 14px;
+    line-height: 16px;
+    color: #CAC9C9;
+    overflow: hidden;
+    text-align: center;
+
+    .text-holder {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 10px;
+
+        &:after,
+        &:before {
+            position: absolute;
+            top: 50%;
+            content: "";
+            height: 1px;
+            width: 999px;
+            background: #CAC9C9;
+        }
+        &:before {
+            right: 100%;
+        }
+        &:after {
+            left: 100%;
+        }
+    }
+}

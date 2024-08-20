@@ -1,0 +1,50 @@
+<div class="wrapper ion-padding">
+  <div class="logo">
+    <a href="#">
+      <img
+      src="assets/logo-picklezone.png"
+      alt="picklezone"
+      loading="lazy">
+    </a>
+  </div>
+  
+  <div class="form-container" *ngIf="form">
+    <strong class="heading">Log In</strong>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <ion-input
+          class="form-control"
+          label="Email"
+          type="email"
+          fill="outline"
+          errorText="Invalid email"
+          formControlName="email"
+          email>
+          <ion-button fill="clear" slot="end">
+            <ion-icon slot="icon-only" name="mail" aria-hidden="true"></ion-icon>
+          </ion-button>
+        </ion-input>
+      </div>
+      <div class="form-row">
+        <ion-input 
+          class="form-control"
+          type="password"
+          fill="outline" 
+          label="Password"
+          formControlName="password"
+          errorText="Incorrect Password, please try again"
+          password>
+          <ion-button fill="clear" slot="end" aria-label="Show/hide">
+            <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+          </ion-button>
+        </ion-input>
+      </div>
+      <p><a href="#">Forgot password?</a></p>
+      <ion-button type="submit" expand="block">Log In</ion-button>
+      <ion-button type="button" expand="block" color="light">Face Login</ion-button>
+    </form>
+    <span class="divider"><span class="text-holder">or</span></span>
+  </div>
+  <img src="assets/bg-body1.png" alt="" class="cover lt">
+  <img src="assets/bg-body2.png" alt="" class="cover rt">
+</div>
