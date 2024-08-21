@@ -1,0 +1,26 @@
+<div class="feed" *ngIf="feed">
+    <div class="feed-holder">
+        <div class="media">
+            <ion-avatar><img [src]="feed.author.avatarUrl" alt="avatar"></ion-avatar>
+            <div class="text-holder">
+                <strong class="heading">{{feed.author.name}}</strong>
+                <em class="date">{{feed.author.date}}</em>
+            </div>
+        </div>
+        <p [innerHTML]="feed.description"></p>
+    </div>
+    <ion-img
+    [src]="feed.image"
+    alt="image description"
+    ></ion-img>
+    <div class="reactions">
+        <ul class="reactions-list">
+            <li [ngClass]="{'active': feed.reactions.isLiked}">
+                <ion-icon name="heart"></ion-icon>
+            </li>
+            <li><ion-icon name="chatbox-ellipses-outline"></ion-icon></li>
+            <li><ion-icon name="share-social-outline"></ion-icon></li>
+        </ul>
+        <strong class="time">{{feed.date}}</strong>
+    </div>
+</div>

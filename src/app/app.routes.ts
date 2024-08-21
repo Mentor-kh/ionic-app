@@ -3,10 +3,15 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/auth/auth.routes').then((m) => m.routes),
+    redirectTo: 'tabs',
+    pathMatch: 'full',
   },
   {
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.routes').then((m) => m.routes),
+  },
+  {
+    path: '',
+    loadChildren: () => import('./pages/auth/auth.routes').then((m) => m.routes),
   },
 ];

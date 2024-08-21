@@ -41,7 +41,10 @@
     --ion-color-primary: #00869C;
     --ion-color-light: white;
     --highlight-color-invalid: #EB5757;
+    --ion-color-danger: #FF2C20;
     --ion-color-dark: #020617;
+    --ion-color-gray: #707070;
+    --ion-color-graylight: #CAC9C9;
     --ion-color-lightdark: #A2A2A2;
     --placeholder-color: #4C4C4C;
 }
@@ -52,8 +55,6 @@ body {
     background: url('/assets/bg-body-main.jpg') no-repeat 50% 50%;
     background-size: cover;
 }
-
-a {text-decoration: none;}
 
 .logo {
     position: relative;
@@ -145,7 +146,8 @@ a {text-decoration: none;}
         font-weight: 700;
         
         --border-radius: 8px;
-      }
+    }
+    a {text-decoration: none;}
 }
 
 /**
@@ -230,6 +232,75 @@ ion-input {
         .icon-eye {
             position: relative;
             top: 2px;
+        }
+    }
+}
+
+/*
+ Feeds
+*/
+.feed {
+    text-align: left;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--ion-color-gray);
+
+    .feed-holder {
+        padding: 16px 24px 0;
+    }
+    p {
+        margin: 0 0 16px;
+    }
+
+    .reactions {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 24px;
+
+        .time {
+            font-weight: 600;
+            color: var(--ion-color-graylight);
+        }
+    }
+    .reactions-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 24px;
+        line-height: 24px;
+
+        li {
+            display: inline-block;
+            vertical-align: top;
+            color: black;
+
+            &+li{margin-left: 16px;}
+
+            &.active {
+                color: var(--ion-color-danger);
+            }
+        }
+    }
+}
+.media {
+    display: flex;
+    margin: 0 0 16px;
+
+    ion-avatar {
+        margin-right: 8px;
+    }
+    .text-holder {
+        flex-grow: 1;
+        align-self: center;
+
+        .heading {
+            display: block;
+            color: black;
+        }
+        .date {
+            font-size: 13px;
+            font-style: normal;
+            color: var(--ion-color-lightdark);
         }
     }
 }
