@@ -9,12 +9,11 @@ export const routes: Routes = [
     children: [
       {
         path: 'login',
-        loadComponent: () =>
-          import('./components/login/login.component').then((m) => m.LoginComponent),
+        component: LoginComponent,
       },
       {
-        path: 'auth',
-        redirectTo: 'auth/login',
+        path: '',
+        redirectTo: 'login',
         pathMatch: 'full',
       },
     ],
