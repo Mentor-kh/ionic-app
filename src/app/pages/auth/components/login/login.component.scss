@@ -22,6 +22,7 @@ img[class^='cover'] {
     position: relative;
     font-size: 14px;
     line-height: 16px;
+    padding: 17px 0;
     color: #CAC9C9;
     overflow: hidden;
     text-align: center;
@@ -48,4 +49,8 @@ img[class^='cover'] {
             left: 100%;
         }
     }
+}
+
+.text-holder {
+    text-align: center;
 }
