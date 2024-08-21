@@ -6,6 +6,9 @@
                 <strong class="heading">{{feed.author.name}}</strong>
                 <em class="date">{{feed.author.date}}</em>
             </div>
+            <ion-button shape="round" color="light">
+                <ion-icon name="ellipsis-horizontal"></ion-icon>
+            </ion-button>
         </div>
         <p [innerHTML]="feed.description"></p>
     </div>
@@ -15,11 +18,12 @@
     ></ion-img>
     <div class="reactions">
         <ul class="reactions-list">
-            <li [ngClass]="{'active': feed.reactions.isLiked}">
-                <ion-icon name="heart"></ion-icon>
+            <li>
+                <ion-icon *ngIf="feed.reactions.isLiked" src="/assets/icon/heart-active.svg"></ion-icon>
+                <ion-icon *ngIf="!feed.reactions.isLiked" src="/assets/icon/heart.svg"></ion-icon>
             </li>
-            <li><ion-icon name="chatbox-ellipses-outline"></ion-icon></li>
-            <li><ion-icon name="share-social-outline"></ion-icon></li>
+            <li><ion-icon src="/assets/icon/chat.svg"></ion-icon></li>
+            <li><ion-icon src="/assets/icon/share.svg"></ion-icon></li>
         </ul>
         <strong class="time">{{feed.date}}</strong>
     </div>

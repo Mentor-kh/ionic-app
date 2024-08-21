@@ -12,8 +12,9 @@ import { triangle, ellipse, square } from 'ionicons/icons';
 })
 export class TabsPage {
   public environmentInjector = inject(EnvironmentInjector);
+  public current_tab: string = "homepage";
 
-  constructor() {
-    addIcons({ triangle, ellipse, square });
+  public setCurrentTab(ev: any): void{
+    this.current_tab = ev.tab;
   }
 }
